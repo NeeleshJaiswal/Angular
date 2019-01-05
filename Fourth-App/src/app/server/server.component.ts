@@ -1,4 +1,4 @@
-import {Component} from '@angular/core'
+import {Component} from '@angular/core';
 
 @Component({
        selector: 'server-component',
@@ -8,5 +8,13 @@ import {Component} from '@angular/core'
 
 export class ServerComponent{
     
+title:string='Data Binding';
+allowNewServer=false;
+
+constructor(){
+    setTimeout( () => {
+        this.allowNewServer=true;
+    },2000);
+}
 
 }
