@@ -1,0 +1,23 @@
+<div class="container" *ngIf="!isSubmitted">
+
+    <div class="form-group">
+        <label>User Name : </label>
+        <input class="form-control" #email/>
+    </div>
+     <div class="form-group">
+        <label>Password : </label>
+        <input type="password" class="form-control" #pwd/>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit(email.value,pwd.value)">Login</button>
+</div>
+
+<div class="container" *ngIf="isSubmitted">
+    <div *ngIf="isAuthenticate; else failureMsg">
+        <label>Welcome {{mailId}}</label>
+    </div>
+    <ng-template #failureMsg>    
+        <h4>Invalid User</h4>
+    </ng-template>
+    <button type="submit" (click)="isSubmitted=false">Back</button>
+
+</div>

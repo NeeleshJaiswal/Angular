@@ -1,5 +1,15 @@
-<h2>Hi Neelesh</h2>
-<h2 style="color:blueviolet">{{ title }}</h2>
-<button class="btn btn-primary" disabled="true">Add Server</button>
+<div class="container">
+ <label>Server Name</label>&nbsp; <br>
+ <input type="text" class="form-control"
+(input)="onUpdateServerName()"
+ />
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
 <br>
-<button> </button>
+<p [innerText]="allowNewServer"></p>
+<br>
+<div>
+
+<input type="text" #ip [(ngModel)]="input"/>
+<button click="change(ip.value)">Change</button>
+</div>
+</div>
