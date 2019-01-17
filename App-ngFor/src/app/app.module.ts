@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
-import { MydropdownComponent } from './mydropdown/mydropdown.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
-    AppComponent, ServerComponent, MydropdownComponent, 
+    AppComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,
